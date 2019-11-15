@@ -5,14 +5,11 @@
 
 customer_name = ()
 require 'colorize'
+require "tty-prompt"
 
-#package_1 = ["1", "front speakers", "rear speakers", "total cost is $300"]
 package_1 = "1, which includes - front speakers, rear speakers, with a total cost of $300"
-#package_2 = ["2", "front speakers", "rear speakers", "tweeter seperates", "speaker amplifier", "total cost is $800"]
 package_2 = "2, front speakers, rear speakers, tweeter seperates, speaker amplifier, total cost is $800"
-#package_3 = ["3", "front speakers", "rear speakers", "subwoofer amplifier", "subwoofer", "total cost is $1100"]
 package_3 = "3, front speakers, rear speakers, subwoofer amplifier, subwoofer, total cost is $1100"
-#package_4 = ["4", "front speakers", "tweeter seperates", "rear speakers", "speaker amplifier", "subwoofer", "subwoofer amplifier", "total cost is $1600"]
 package_4 = "4, front speakers, tweeter seperates, rear speakers, speaker amplifier, subwoofer, subwoofer amplifier, total cost is $1600"
 
 
