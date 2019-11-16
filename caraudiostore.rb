@@ -32,16 +32,16 @@ puts "Welcome to 'The Car Stereo Shop' online guidance application".colorize(:re
 # sleep 1.5
 puts "Lets make it easy for you to choose a Car Audio System suitable for your music needs with only a few questions"
 # sleep 2
-print "Lets start off with your Name ?".colorize(:red) + " "
+puts "Lets start off with your Name ?".colorize(:red) + " "
 customer_name = gets.chomp 
-puts "Welcome #{customer_name} Lets get started !"
+puts "Welcome #{customer_name} Lets get started ! \n"
 # sleep 1
 
 # First question for the user
 puts  "First question"
     # sleep 1
 puts "Are you happy to install a subwoofer ? Keeping in mind this adds additional weight to the total system.
-Please select from (1) yes or (2) no".colorize(:red)
+Please select from (1) yes or (2) no \n".colorize(:red)
 subwoofer = gets.chomp
 # sleep 1
 puts "Thanks #{customer_name}, Second question"
@@ -49,7 +49,7 @@ puts "Thanks #{customer_name}, Second question"
 
 # Second question for the user
 puts "How important is sound quality to you ? 
-Please select from (1) Not very, (2) Average and (3) Very important".colorize(:red)
+Please select from (1) Not very, (2) Average and (3) Very important \n".colorize(:red)
 sound_q = gets.chomp
 # sleep 1
 puts "Thanks #{customer_name}, Last question"
@@ -57,7 +57,7 @@ sleep 1
 
 # Last question for the user
 puts "What genre of music would you most prefer from the selection ?
-Please select from (1) Classical/Instrumental, (2) Rock/Metal, (3) Rap/Techno.".colorize(:red)
+Please select from (1) Classical/Instrumental, (2) Rock/Metal, (3) Rap/Techno \n".colorize(:red)
 genre = gets.chomp
 sleep 1
 puts "Thanks #{customer_name}. See how easy that was ?"
@@ -73,7 +73,8 @@ sleep 1.5
     #genre - 1 is "Classical/Instrumental", 2 is "Rock/Metal", 3 is "Rap/Techno"
 
 if subwoofer == "1" && sound_q == "1" && genre == "1"
-    print "#{customer_name} we suggest package #{package_2}"
+    puts "#{customer_name} we suggest package #{package_2}"
+    $package_selection = gets.chomp
 
 elsif subwoofer == "1" && sound_q == "1" && genre == "2"
     puts "#{customer_name} we suggest package #{package_1}"
@@ -127,11 +128,26 @@ elsif subwoofer == "2" && sound_q == "3" && genre == "3"
     puts "#{customer_name} we suggest package #{package_2}"
 
 else 
-    puts "Sorry you have input information incorrectly we will get you to try again"
+    puts "Sorry you have input information incorrectly #{customer_name} we will require you to try again"
 
 end
 
-if "#{customer_name} we suggest package #{package_2}"
-    puts "This test worked"
-else print "nothing"
+puts "Would you like to add this package to your cart? Please select A for yes or B for no."
+$user_input = gets.chomp.upcase
+
+menu = $user_input
+case menu 
+
+    when "A"
+    puts "Thanks #{customer_name} we will add this to your cart"
+    $user_input = gets.chomp
+    when "B"
+    puts "Thanks #{customer_name} we wont add this into your cart"
+    $user_input = gets.chomp
+    end 
+
+if "A"
+    puts "Test "
+elsif "B"
+    puts "Test Again"
 end
