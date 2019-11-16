@@ -12,6 +12,10 @@ package_2 = "2, front speakers, rear speakers, tweeter seperates, speaker amplif
 package_3 = "3, front speakers, rear speakers, subwoofer amplifier, subwoofer, total cost is $1100"
 package_4 = "4, front speakers, tweeter seperates, rear speakers, speaker amplifier, subwoofer, subwoofer amplifier, total cost is $1600"
 
+package_1cost = $300.to_i
+package_2cost = $800.to_i
+package_3cost = $1100.to_i
+package_4cost = $1600.to_i
 
 puts "Welcome to 'The Car Stereo Shop' online guidance application".colorize(:red)
     sleep 1.5
@@ -114,4 +118,9 @@ Please select from (1) Classical/Instrumental, (2) Rock/Metal, (3) Rap/Techno.".
     else 
         puts "Sorry you have input information incorrectly we will get you to try again"
 
+    end
+
+    if "#{customer_name} we suggest package #{package_2}"
+        puts "This test worked"
+    else print "nothing"
     end
