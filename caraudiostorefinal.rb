@@ -13,8 +13,10 @@ def checkout
     exit
         elsif payment == "R"
     puts "Cancelling transaction, returning you to the main menu".colorize(:red)
+    sleep 2
         else 
     puts "Sorry something went wrong, now taking you back to main menu".colorize(:red)
+    sleep 2
         end
 end
 
