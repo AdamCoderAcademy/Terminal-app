@@ -2,10 +2,10 @@ user_quits = false
 require 'colorize'
 
 #packages variables
-package_1 = "1, front speakers, rear speakers, with a total cost of $300"
-package_2 = "2, front speakers, rear speakers, tweeter seperates, speaker amplifier, total cost is $800"
-package_3 = "3, front speakers, rear speakers, subwoofer amplifier, subwoofer, total cost is $1100"
-package_4 = "4, front speakers, tweeter seperates, rear speakers, speaker amplifier, subwoofer, subwoofer amplifier, total cost is $1600"
+package_A = "1, front speakers, rear speakers, total cost is $300"
+package_B = "2, front speakers, rear speakers, tweeter seperates, speaker amplifier, total cost is $800"
+package_C = "3, front speakers, rear speakers, subwoofer amplifier, subwoofer, total cost is $1100"
+package_D = "4, front speakers, tweeter seperates, rear speakers, speaker amplifier, subwoofer, subwoofer amplifier, total cost is $1600"
 
 # My welcome message and Main Menu options.
 
@@ -18,16 +18,20 @@ If you would like to exit please select D."
 user_menu_selection = gets.chomp.upcase
 
 case user_menu_selection 
+
 when "A"
     puts "Here at Car Stereo Store we offer 4 packages sure to please anyone.
     This reduces cost on our side so we can pass the savings onto you, the customer.
     It also means that by bundling components together you can be sure they work perfectly for your needs \n
     Currently we have 4 packages on offer. \n
-    #{package_1}
-    #{package_2}
-    #{package_3}
-    #{package_4} \n
-    If you are unsure where to start please go back to the main menu and try option B to get a recomendation"
+    Package A #{package_A}
+    Package B #{package_B}
+    Package C #{package_C}
+    Package D #{package_D} \n
+    If you are unsure where to start please go back to the main menu and try option B to get a recomendation
+
+    Please select from packages A - B or select "
+
 
 when "B"
     puts "Welcome to the 'Car Stereo Store' guidance application".colorize(:red)
@@ -75,75 +79,75 @@ when "B"
         #genre - 1 is "Classical/Instrumental", 2 is "Rock/Metal", 3 is "Rap/Techno"
         
         if subwoofer == "1" && sound_q == "1" && genre == "1"
-            puts "#{customer_name} we suggest package #{package_2}\n
+            puts "#{customer_name} we suggest package #{package_B}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "1" && sound_q == "1" && genre == "2"
-            puts "#{customer_name} we suggest package #{package_1}\n
+            puts "#{customer_name} we suggest package #{package_A}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "1" && sound_q == "1" && genre == "3"
-            puts "#{customer_name} we suggest package #{package_3}\n
+            puts "#{customer_name} we suggest package #{package_C}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "1" && sound_q == "2" && genre == "1"
-            puts "#{customer_name} we suggest package #{package_3}\n
+            puts "#{customer_name} we suggest package #{package_C}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "1" && sound_q == "2" && genre == "2"
-            puts "#{customer_name} we suggest package #{package_3}\n
+            puts "#{customer_name} we suggest package #{package_C}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "1" && sound_q == "2" && genre == "3"
-            puts "#{customer_name} we suggest package #{package_3}\n
+            puts "#{customer_name} we suggest package #{package_C}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "1" && sound_q == "3" && genre == "1"
-            puts "#{customer_name} we suggest package #{package_4}\n
+            puts "#{customer_name} we suggest package #{package_D}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "1" && sound_q == "3" && genre == "2"
-            puts "#{customer_name} we suggest package #{package_4}\n
+            puts "#{customer_name} we suggest package #{package_D}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "1" && sound_q == "3" && genre == "3"
-            puts "#{customer_name} we suggest package #{package_4}\n
+            puts "#{customer_name} we suggest package #{package_D}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "2" && sound_q == "1" && genre == "1"
-            puts "#{customer_name} we suggest package #{package_1}\n
+            puts "#{customer_name} we suggest package #{package_A}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "2" && sound_q == "1" && genre == "2"
-            puts "#{customer_name} we suggest package #{package_1}\n
+            puts "#{customer_name} we suggest package #{package_A}\n
             Taking you back to the main menu" 
         sleep 6
         elsif subwoofer == "2" && sound_q == "1" && genre == "3"
-            puts "#{customer_name} we suggest package #{package_1}\n
+            puts "#{customer_name} we suggest package #{package_A}\n
             Taking you back to the main menu"  
         sleep 6
         elsif subwoofer == "2" && sound_q == "2" && genre == "1"
-            puts "#{customer_name} we suggest package #{package_2}\n
+            puts "#{customer_name} we suggest package #{package_B}\n
             Taking you back to the main menu"     
         sleep 6
         elsif subwoofer == "2" && sound_q == "2" && genre == "2"
-            puts "#{customer_name} we suggest package #{package_1}\n
+            puts "#{customer_name} we suggest package #{package_A}\n
             Taking you back to the main menu"    
         sleep 6
         elsif subwoofer == "2" && sound_q == "2" && genre == "3"
-            puts "#{customer_name} we suggest package #{package_2}\n
+            puts "#{customer_name} we suggest package #{package_B}\n
             Taking you back to the main menu"   
         sleep 6
         elsif subwoofer == "2" && sound_q == "3" && genre == "1"
-            puts "#{customer_name} we suggest package #{package_2}\n
+            puts "#{customer_name} we suggest package #{package_B}\n
             Taking you back to the main menu"
         sleep 6
         elsif subwoofer == "2" && sound_q == "3" && genre == "2"
-            puts "#{customer_name} we suggest package #{package_2}\n
+            puts "#{customer_name} we suggest package #{package_B}\n
             Taking you back to the main menu"   
         sleep 6
         elsif subwoofer == "2" && sound_q == "3" && genre == "3"
-            puts "#{customer_name} we suggest package #{package_2}\n
+            puts "#{customer_name} we suggest package #{package_B}\n
             Taking you back to the main menu"
         sleep 6
 
