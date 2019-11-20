@@ -66,9 +66,9 @@ when "B"
 puts "Welcome to the 'Car Stereo Store' guidance application".colorize(:red)
 sleep 2
 puts "We make it easy for you to choose a Car Audio System suitable for your music needs with only a few questions"
-sleep 2
+sleep 2.5
 puts "Lets get started ! \n"
-sleep 1
+sleep 1.5
         
 # First question for the user
 puts  "First question"
