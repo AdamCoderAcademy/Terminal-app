@@ -31,3 +31,10 @@ put the image file of diagram here
 ## Status updates 
 
 16/11/19 @ 10am. Removed my original idea using arrays. I wanted to assign value to each answer from the Package Recommendation than collect a total score based on their answers to then present them with the best package. During testing I found that assigning them a value each wasn't able to produce the package I wanted and this is mostly due the the particular questions being asked. I individually went through all of the combinations to make sure it gives the user the package that is most suited to their tastes, this does not take into account what budget they want to allow because if budget was to come into the equation I would not be able to recommend what package they really need because in most cases car or home audio is always going to be well out of the average persons budget of what they think they need to spend to get what they want. This is why when someone does come into a store with a budget in mind and aim for a particular system, sometimes the budget maxes out. They end up being very underwhelmed and won't get the result they want.
+
+20/11/19 all day. Rewrote the code to include an initial menu system in order to meet the feature requirements. Previously the application was designed around the recommendation system however now it is based around being welcomed to an initial store where you can also browse, checkout etc.
+
+# Manual Testing
+1 - Problem with main menu exit. Tested for errors regarding the loop system in main menu, previously I had no way to quit the loop correctly and had used an else statement with the exit command in my code. However this would give a syntax error if any other key input other than the ones listed in the gets.chomp to puts was input. I fixed this by creating an until user = quits case and allowing the user to physically select quit which then returned a true and breaks the until loop.
+
+2 - Problem with assigning a number value to the 3 questions asked in the recommendation  
