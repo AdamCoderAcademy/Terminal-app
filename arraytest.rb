@@ -26,6 +26,6 @@ customer_cart = []
 # Options - Add, Remove, Checkout, Review, Quit 
 
 until quit == true do
-    puts "Would you like to Add,  "
+    puts "Would you like to Add anything,  "
 
 end

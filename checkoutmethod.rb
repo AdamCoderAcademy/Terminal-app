@@ -6,6 +6,9 @@ def checkout
     payment = gets.chomp.upcase
         if payment == "PAYNOW"
     puts "Thank you for shopping with us payment has been accepted\n".colorize(:green)
+    sleep 2
+    a = Artii::Base.new
+puts a.asciify("sorry ... there  is  no  refund").colorize(:red)
     exit
         elsif payment == "R"
     puts "Cancelling transaction, returning you to the main menu".colorize(:red)
