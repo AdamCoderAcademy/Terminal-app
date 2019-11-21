@@ -1,24 +1,25 @@
-cart = ()
 user_quits = false
 require 'colorize'
+require 'artii'
+require "./checkoutmethod"
 
-# Checkout Method
-def checkout
-    sleep 1
-    puts "This is your total amount to be paid by credit or bank card in order to book in your vehicle".colorize(:green)
-    puts "Please type paynow in order to authorise payment or type R to return to main menu"
-    payment = gets.chomp.upcase
-        if payment == "PAYNOW"
-    puts "Thank you for shopping with us payment has been accepted\n".colorize(:green)
-    exit
-        elsif payment == "R"
-    puts "Cancelling transaction, returning you to the main menu".colorize(:red)
-    sleep 2
-        else 
-    puts "Sorry something went wrong, now taking you back to main menu".colorize(:red)
-    sleep 2
-        end
-end
+# # Checkout Method
+# def checkout
+#     sleep 1
+#     puts "This is your total amount to be paid by credit or bank card in order to book in your vehicle".colorize(:green)
+#     puts "Please type paynow in order to authorise payment or type R to return to main menu"
+#     payment = gets.chomp.upcase
+#         if payment == "PAYNOW"
+#     puts "Thank you for shopping with us payment has been accepted\n".colorize(:green)
+#     exit
+#         elsif payment == "R"
+#     puts "Cancelling transaction, returning you to the main menu".colorize(:red)
+#     sleep 2
+#         else 
+#     puts "Sorry something went wrong, now taking you back to main menu".colorize(:red)
+#     sleep 2
+#         end
+# end
 
 # Packages variables
 package_A = "A, front speakers, rear speakers, total cost is $300"
@@ -34,8 +35,11 @@ package_D_cost = 1600
 
 # My welcome message and Main Menu options.
 until user_quits
-puts "\nWelcome to Car Stereo Store \n
-If you would like to browse our store please select A.
+a = Artii::Base.new
+puts a.asciify('Welcome to Car Stereo Store').colorize(:green)
+puts "\n"
+sleep 1
+puts "\nIf you would like to browse our store please select A.
 If you would like us to recommend a package please select B.
 If you would like to view your cart select C.
 To checkout select D
@@ -230,7 +234,7 @@ sleep 1
     if cart = cart
         puts "Currently inside your cart is..
         Package #{cart}"   
-    else cart.empty?
+    else cart =
         puts "Your cart is still empty. \n 
         Taking you back to the main menu".colorize(:red)
     end
